@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>redage.net - Phone</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="package://cef/fonts/phone.css">
+    <link rel="stylesheet" href="package://cef/css/grids-min.css">
+    <link rel="stylesheet" href="package://cef/css/phone.css">
+    <link rel="stylesheet" href="package://cef/css/os.css">
+    <style>
+        body {
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            font-family: "Ubuntu", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone" style="opacity: 0">
+        <div class="phone-speaker"></div>
+        <div class="phone-camera"></div>
+        <div class="phone-screen">
+            <div class="bar">
+                <div class="flaticon-phone carrier"><span>RedSpace</span></div>
+                <div class="flaticon-silhouette battery"></div>
+            </div>
+            <div class="pure-g main">
+                <!--OS Elements here-->
+            </div>
+            <div class="navigation">
+                <div class="back flaticon-arrows" onClick="back();"></div>
+                <div class="home flaticon-square" onClick="home();"></div>
+            </div>
+            <div class="debug">AppID: </div>
+        </div>
+    </div>
+</body>
+<script src="package://cef/js/jquery-3.2.1.min.js"></script>
+<script src="package://cef/js/move.min.js"></script>
+<script src='package://cef/js/os.js'></script>
+</html>

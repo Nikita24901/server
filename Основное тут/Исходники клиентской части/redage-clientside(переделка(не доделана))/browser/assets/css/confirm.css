@@ -1,0 +1,129 @@
+.confirm {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.confirm button {
+  font-family: 'UniNeue';
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.confirm .confirmbox {
+  width: 570px;
+  min-height: 200px;
+  max-height: 400px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+}
+
+.confirm .headerinfo {
+  width: 570px;
+  min-height: 130px;
+  max-height: 330px;
+  display: flex;
+}
+
+.confirm .icon {
+  width: 30px;
+  height: 30px;
+  margin-top: 50px;
+  margin-left: 43px;
+}
+
+.confirm .textconfirmbox {
+  margin-left: 42px;
+  margin-top: 31px;
+  max-width: 400px;
+  max-height: 330px;
+  margin-bottom: 10px;
+}
+
+.confirm .name {
+  width: 300px;
+  height: 25px;
+  overflow: hidden;
+}
+
+.confirm .nameplayer {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b5b5b5;
+}
+
+.confirm .textinfo {
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap:break-word;
+}
+
+.confirm .sum::before{
+  content: "$";
+}
+
+.confirm .footerinfo {
+  width: 570px;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0px 4px 4px 0px;
+}
+
+.confirm .buttonyes {
+  background: #6C6C6C;
+  width: 150px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 115px;
+}
+
+.confirm .buttonno {
+  background: #BC3E38;
+  width: 150px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 36px;
+}
+
+.confirm .buttonyes:hover {
+  background: #888888;
+}
+
+.confirm .buttonno:hover {
+  background:#D84943;
+}
+
+.confirm .textbutton {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+@media  (max-width: 1200px)  {
+  .confirm {zoom: 55%;}
+}
+@media (min-width: 1201px) and (max-width: 1499px) {
+  .confirm {zoom: 80%;}
+}
+@media (min-width: 1500px) and (max-width: 1699px) {
+  .confirm {zoom: 80%;}
+}
+@media (min-width: 1700px) and (max-width: 2560px) {
+  .confirm {zoom: 100%;}
+}

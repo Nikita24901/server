@@ -1,0 +1,747 @@
+.hud {
+    user-select: none;
+}
+
+.watermark {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    justify-content: space-around;
+    
+    font-family: UniNeue;
+    
+    width: 177px;
+    height: 45px;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.watermark-content {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+}
+
+.watermark-content img {
+    width: 44px;
+    padding-left: 10px;
+    padding-right: 9px;
+}
+
+.helpbox {
+    position: absolute;
+    text-align: left;
+    
+    font-family: UniNeue;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.5;
+    right: 0px;
+
+    bottom: 25%;
+    /*top: 50%;
+    transform: translateY(-50%);*/
+}
+
+.helpbox p {
+    margin: 0;
+}
+
+.icon-bind {
+    position: absolute;
+    font-size: 15px;
+    width: auto;
+    height: 20px;
+    line-height: 18px;
+    color: #fff;
+    outline: 1px solid #fff;
+    margin-top: -14px;
+    margin-left: 14px;
+}
+
+.icon-bind span {
+    font-family: UniNeue;
+    margin: 5px;
+}
+
+.indicators_player 
+{
+    display: flex;
+    position:absolute;
+    overflow: hidden;
+    
+    width: 503px;
+    height: 45px;
+    bottom: 0px;
+    right: 0px;
+
+    font-family: UniNeue;
+    background:rgba(0,0,0,0.4);
+}
+
+.indicators_player .data 
+{
+    width: 60px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 24px;
+}
+
+.indicators_player .data p:first-child {
+    font-size: 23px;
+}
+
+.indicators_player .data p:last-child {
+    margin-top: -7px;
+    font-size: 14px;
+}
+
+.indicators_player .microphone {
+    font-size: 24px;
+    margin-left: 24px;
+    margin-top: 10px;
+}
+
+.indicators_player .money {
+    display: flex;
+
+    width: 158px;
+    height: 24px;
+
+    margin-left: 24px;
+    margin-top: 10px;
+
+    font-size: 21.15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.indicators_player .money_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 12px;
+    font-weight: 500;
+}
+
+.indicators_addinational {
+    position: absolute;
+    overflow: hidden;
+
+    width: 90px;
+    height: 45px;
+    bottom: 0px;
+    right: 503px;
+    z-index: 2;
+
+    background: rgba(0, 0, 0, 0.4);
+    font-family: UniNeue;
+    font-weight: 500;
+}
+
+.indicators_addinational .patrons {
+    display: flex;
+    color: #fff;
+
+    font-size: 22.93px;
+    font-weight: 500;
+    margin-left: 11px;
+}
+
+.indicators_addinational .patrons span {
+    font-size: 26px;
+    margin-top: 10px;
+    margin-right: 13px;
+}
+
+.indicators_addinational .patrons p {
+    margin-top: 0px;
+    line-height: 45px;
+}
+
+.indicators_vehicle {
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+
+    width: 270px;
+    height: 45px;
+    bottom: 55px;
+    right: 0px;
+    
+    font-family: UniNeue;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.indicators_vehicle .speed {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    margin-left: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.indicators_vehicle .speed p:first-child {
+    font-size: 23px;
+    margin-top: 0px;
+}
+
+.indicators_vehicle .speed p:last-child {
+    margin-top: -6px;
+    font-size: 14px;
+}
+
+.indicators_vehicle .icon_block {
+    width: 28px;
+    font-size: 23px;
+    margin-left: 24px;
+    margin-top: 10px;
+}
+
+.indicators_vehicle .petrol {
+    font-size: 21px;
+    width: 60px;
+    display: inline-flex;
+}
+
+.hud .minimap-block {
+    display: inline-flex;
+    height: 100%;
+}
+
+.hud .minimap {
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%);
+    /*background: rgba(255, 255, 255, 0.5);*/
+}
+
+.hud .indicators_world {
+    font-family: 'UniNeue';
+    position: relative;
+    color: #efefef;
+    top: 100%;
+    transform: translateY(-100%);
+    height: 45px;
+    margin-left: 10px;
+}
+
+.hud .indicators_world #location {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.hud .indicators_world #street {
+    font-size: 21px;
+}
+
+.chat {
+    font-family: UniNeue;
+    position: absolute;
+}
+
+.chat .input {
+    position: absolute;
+    width: 550px;
+    height: 45px;
+    /*left: 17px;*/
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-top: 25px;
+    background: rgba(0,0,0,0.4);
+    display: block;
+}
+
+.chat .input .help {
+    font-family: UniNeue;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 5px 8px;
+    margin-top: 11px;
+    float: left;
+}
+
+.chat .input .tag {
+    opacity: 0.5;
+    width: 30px;
+    font-size: 17px;
+    line-height: 17px;
+    color: #fff;    
+    float: left;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.chat .input input {
+    font-family: UniNeue;
+    font-size: 15px;
+    font-weight: 400;
+    background: transparent;
+    color: #fff;
+    width: 395px;
+    border: 0;
+    float: left;
+    margin-top: 10px;
+    outline: none;
+}
+
+.chat .input input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.chat .input .chatSend {
+    margin-top: 15px;
+    transition: 0.2s;
+    opacity: 0.5;
+    color: #fff;
+    float: right;
+    cursor: pointer;
+}
+
+.chat .input .chatSend:hover {
+    transition: 0.2s;
+    opacity: 1.0;
+}
+
+.chat .backFiler {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    background: #000;
+    border-radius: 100%;
+    margin: -150px 0 0 -200px;
+    filter: blur(170px);
+    opacity: 0.4;
+}
+
+.chat .messagesList {
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: auto;
+    direction: rtl;
+    text-align: left;
+    line-height: 24px;
+    height: calc(23.64px * 10);
+    color: #fff;
+}
+
+.chat .messagesList ::-webkit-scrollbar {
+    width: 2px;
+}
+
+.chat .messagesList ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); 
+}
+
+.chat .messagesList ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.8); 
+}
+
+.chat .messagesList ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 1.0); 
+}
+
+.chat .messagesList p {
+    position: relative;
+    direction: ltr;
+    margin-left: 10px;
+    text-shadow: black 0 0 4px;
+}
+
+.chat .chatBackgroundShadow {
+    overflow: hidden;
+    position: absolute;
+}
+
+.chat .chatBackgroundShadow img {
+    position: fixed;
+    opacity: 0.6;
+    filter: blur(50px);
+    transform: translate(-50%, -35%);
+    z-index: -1;
+}
+
+.dial {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    margin: -150px 0 0 -150px;
+}
+
+.dial .img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    position: fixed;
+}
+
+.dial .base {
+    background-image: url('../../assets/img/hud/breakinglock/s1.png')
+}
+
+.dial .num {
+    background-image: url('../../assets/img/hud/breakinglock/s2.png')
+}
+
+.dial .center {
+    background-image: url('../../assets/img/hud/breakinglock/s3.png')
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px); }
+    10% { transform: translate(-1px, -1px); }
+    20% { transform: translate(-1px, 0px); }
+    30% { transform: translate(0px, 1px); }
+    40% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 1px); }
+    60% { transform: translate(-1px, 1px); }
+    70% { transform: translate(1px, 1px); }
+    80% { transform: translate(-1px, -1px); }
+    90% { transform: translate(1px, 1px); }
+    100% { transform: translate(1px, -1px); }
+}
+
+.shake1 {
+    animation-name: shake;
+    animation-duration: 6s;
+    transform-origin:50% 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.shake2 {
+    animation-name: shake;
+    animation-duration: 5s;
+    transform-origin:75% 75%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.shake3 {
+    animation-name: shake;
+    animation-duration: 4s;
+    transform-origin:100% 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.shake4 {
+    animation-name: shake;
+    animation-duration: 3s;
+    transform-origin:50% 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.shake1,
+.shake2,
+.shake3,
+.shake4 {
+    display:inline-block;
+}
+
+.lift {
+    position: absolute;
+    background-image: url('../img/hud/lift/lift.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: -175px;
+    margin-top: -130px;
+    height: 260px;
+    width: 350px;
+    left: 50%;
+    top: 50%;
+}
+
+.lift h1 {
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 48px;
+    color: white;
+    height: 40px;
+    width: 290px;
+}
+
+.lift #btn-down {
+    margin-left: 80px;
+    height: 60px;
+    width: 60px;
+}
+
+.lift #btn-up {
+    margin-left: 70px;
+    height: 60px;
+    width: 60px;
+}
+
+.lift #btn-stop {
+    margin-left: 20px;
+    margin-top: 30px;
+    height: 30px;
+    width: 140px;
+}
+
+.lift #btn-start {
+    margin-left: 30px;
+    margin-top: 30px;
+    height: 30px;
+    width: 140px;
+}
+
+.lift div {
+    float: left;
+    cursor: pointer;
+}
+
+.joblist {
+    font-family: 'UniNeue';
+    color:#fff;
+}
+
+@media  (max-width: 1300px)  {
+    .joblist .adaptive {zoom: 80%}
+}
+
+@media (min-width: 1301px) and (max-width: 1400px) {
+    .joblist .adaptive {zoom: 80%}
+}
+
+@media (min-width: 1401px) and (max-width: 1650px) {
+    .joblist .adaptive {zoom: 100%}
+}
+
+@media (min-width: 1651px) and (max-width: 2560px) {
+    .joblist .adaptive {zoom: 100%}
+}
+
+.joblist .boxtop {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.joblist .box {
+    width: 494px;
+    height: 678px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.joblist .header {
+    width: 100%;
+    height: 54px;
+    display: flex;
+}
+
+.joblist .workbox {
+    width: 103%;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.joblist .boxes2column {
+    margin-left: 10px;
+}
+
+.joblist .arrow {
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background: url(../img/hud/joblist/arrow.svg);
+    margin-top: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.joblist .arrow:hover {
+    transform: scale(1.1);
+    -webkit-transition: all 1s ease;
+}
+
+.joblist .txtheader {
+    font-size: 18px;
+    line-height: 54px;
+}
+
+.joblist .workboxes {
+    position:relative;
+    width: 242px;
+    height: 135px;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-left: 3px;
+}
+
+.joblist .block {
+    opacity: 0.3;
+    position: absolute;
+}
+
+.joblist .blocktxt {
+    opacity: 0.3;
+}
+
+.joblist .electro {
+    background-image: url(../img/hud/joblist/electro.svg);
+}
+
+.joblist .taxi {
+    background-image: url(../img/hud/joblist/taxi.svg);
+}
+
+.joblist .gazon {
+    background-image: url(../img/hud/joblist/gazon.svg);
+}
+
+.joblist .inkos {
+    background-image: url(../img/hud/joblist/inca.svg);
+}
+
+.joblist .inkoslvl {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 56px;
+    height: 22px;
+    margin-top: 57px;
+    opacity:0;
+
+}
+
+.joblist .workboxes:hover .inkoslvl{
+    opacity:1;
+    transition: 1s;
+}
+
+.joblist .textlvl {
+    font-size: 10px;
+    position: absolute;
+    width: 56px;
+    height: 22px;
+    margin-left: 16px;
+    margin-top: 4px;
+}
+
+.joblist .textlvl2 {
+    font-size: 10px;
+    position: absolute;
+    width: 56px;
+    height: 22px;
+    margin-left: 33px;
+    margin-top: 4px;
+}
+
+.joblist .inkoslvl:hover {
+    display:block;
+}
+
+.joblist .pochta {
+    background-image: url(../img/hud/joblist/pochta.svg);
+}
+
+.joblist .bus {
+    background-image: url(../img/hud/joblist/bus.svg);
+}
+
+.joblist .truck {
+    background-image: url(../img/hud/joblist/truck.svg);
+}
+
+.joblist .mechanic {
+    background-image: url(../img/hud/joblist/mechanic.svg);
+}
+
+.joblist .textboxwork {
+    font-size: 15px;
+    margin-left: 11px;
+}
+
+.joblist .workimg {
+    margin-left: 152px;
+    margin-top: -4px;
+    position: absolute;
+}
+
+.joblist .worktextopen {
+    font-size: 10px;
+    margin-left: 183px;
+    margin-top: -31px;
+}
+
+.joblist .worktoptxt{
+    height: 25px;
+    margin-top: 8px;
+    margin-left: 9px;
+}
+
+.joblist .buttongetsettled {
+    width: auto;
+    height: 30px;
+    background:  #588941;
+    margin-top: 72px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.joblist .buttongetsettledred {
+    width: auto;
+    height: 30px;
+    background: #A54742;
+    margin-top: 72px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.joblist .buttongetsettled:hover {
+    background: #75BD53;
+}
+
+.joblist .buttongetsettledred:hover {
+    background: #D44D47;
+}
+
+.joblist .buttongetsettledred:focus {
+    outline: none;
+}
+
+.joblist .buttongetsettledred:active {
+    background: #D44D47;
+}
+
+.joblist .buttongetsettled:focus {
+    outline: none;
+}
+
+.joblist .buttongetsettled:active {
+    background: #75BD53;
+}
+
+.joblist .buttontxtgetsettled {
+    font-size: 15px;
+}
+
+.jobstatus {
+    margin-top: 17px;
+}

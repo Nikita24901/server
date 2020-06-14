@@ -1,0 +1,354 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,500,700');
+
+@font-face {
+    font-family: "Uni Neue";
+    src: url("../fonts/UniNeue/400/UniNeueRegular.eot");
+    src: url("../fonts/UniNeue/400/UniNeueRegular.woff") format("woff"), url("../fonts/UniNeue/400/UniNeueRegular.ttf") format("truetype"), url("../fonts/UniNeue/400/UniNeueRegular.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Uni Neue";
+    src: url("../fonts/UniNeue/300/UniNeueLight.eot");
+    src: url("../fonts/UniNeue/300/UniNeueLight.woff") format("woff"), url("../fonts/UniNeue/300/UniNeueLight.ttf") format("truetype"), url("../fonts/UniNeue/300/UniNeueLight.svg") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Uni Neue";
+    src: url("../fonts/UniNeue/500/UniNeueBook.eot");
+    src: url("../fonts/UniNeue/500/UniNeueBook.woff") format("woff"), url("../fonts/UniNeue/500/UniNeueBook.ttf") format("truetype"), url("../fonts/UniNeue/500/UniNeueBook.svg") format("svg");
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/* RA logotype */
+.logobox {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: Uni Neue;
+    width: 177px;
+    height: 45px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+}
+
+.logo img {
+    width: 44px;
+    padding-left: 10px;
+    padding-right: 9px;
+}
+
+.players_online {
+    display: flex;
+    width: 160px;
+    height: 20px;
+    justify-content: flex-end;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.players_online p {
+    padding-right: 10px;
+    font-weight: 100;
+}
+
+.players_online span p {
+    padding-right: 0;
+    font-weight: 700;
+}
+
+/* User game hud */
+
+.inGameHud {
+    position: absolute;
+    margin: 0 auto;
+    font-family: Uni Neue;
+    line-height: normal;
+    color:#fff;
+
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 1024px) and (max-width: 1300px)  {
+    .inGameHud .adaptivhud {zoom: 70%}
+}
+@media (min-width: 1301px) and (max-width: 1400px) {
+    .inGameHud .adaptivhud {zoom: 84%}
+}
+@media (min-width: 1401px) and (max-width: 1600px) {
+    .inGameHud .adaptivhud {zoom: 84%}
+}
+@media (min-width: 1601px) and (max-width: 2560px) {
+    .inGameHud .adaptivhud {zoom: 100%}
+}
+
+.inGameHud .position 
+{
+    width: 571px;
+    height: 46px;
+}
+
+.inGameHud .hud 
+{
+    width: 503px;
+    height: 45px;
+    background:rgba(0, 0, 0, 0.4);
+    position:absolute;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+    overflow: hidden;
+}
+
+.inGameHud .gunshud 
+{
+    width: 90px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.4);
+    position:absolute;
+    bottom:0px;
+    right: 503px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.inGameHud .patrons 
+{
+    width: 90px;
+    height: 24px; 
+    display: flex;
+    margin-top: 9px;
+    margin-left: 12px;
+    position: absolute;
+}
+
+.inGameHud .patronsblock 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin-top: 2px;
+    margin-left: 11px;
+}
+
+.inGameHud #patronnum 
+{
+    font-size: 22.93px;
+}
+
+.inGameHud .datehud 
+{
+    width: 58px;
+    margin-left: 24px;
+    margin-top: -4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inGameHud #time 
+{
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: -4px;
+}
+
+.inGameHud #datetime 
+{
+    font-size: 14px; 
+    font-weight: 500;
+    margin-top: -25px;
+}
+
+.inGameHud .microhud 
+{
+    width: 20px; 
+    height: 24px; 
+    margin-left: 24px;
+    margin-top: 10px;
+}
+
+.inGameHud .pouch 
+{
+    width: 158px;
+    height: 24px;
+    margin-left: 24px;
+    margin-top: 10px;
+    display: flex;
+    font-weight: 500;
+}
+
+.inGameHud .moneyinblock 
+{ 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 12px;
+}
+
+.inGameHud #money 
+{
+    font-size: 21.15px;
+}
+
+.inGameHud #jsmoney 
+{
+    font-size: 21.15px;
+}
+
+.inGameHud .bank 
+{
+    width: 24px; 
+    height: 24px; 
+    margin-left: 24px;
+    margin-top: 10px; 
+    display: flex;
+}
+
+.inGameHud #jsbank 
+{
+    font-size: 21.15px;
+}
+
+.inGameHud .bankinblock 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 12px;
+    font-weight: 500;
+}
+
+.inGameHud .carhud 
+{
+    width: 270px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.4);
+    position:absolute;
+    bottom: 55px;
+    right: 0px;
+    overflow: hidden;
+}
+
+.inGameHud .carshuds 
+{
+    display: flex;
+}
+
+.inGameHud .speedhud 
+{
+    width: 40px;
+    font-weight: 500;
+    margin-left: 12px;
+    margin-top: -1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inGameHud #speed 
+{
+    font-size: 23px;
+    margin-bottom: -2px; 
+}
+
+.inGameHud #speedtxt 
+{
+    font-size: 14px;
+    margin-top: -25px;
+}
+
+.inGameHud .doorhud 
+{
+    width: 28px; 
+    height: 26px; 
+    margin-left: 24px;
+    margin-top: 10px;
+}
+
+.inGameHud .enginehud 
+{
+    width: 28px; 
+    height: 28px; 
+    margin-left: 24px; 
+    margin-top: 9px;
+}
+
+.inGameHud .petrol 
+{
+    width: 24px; 
+    height: 24px; 
+    margin-left: 24px; 
+    margin-top: 11px; 
+    display: flex;
+}
+
+.inGameHud .petrolblock 
+{ 
+    display: flex; 
+    justify-content: center;
+    align-items: center;  
+    margin-left: 9px;
+    font-weight: 500;
+}
+
+.inGameHud #petrolit 
+{
+    font-size: 21.15px;
+}
+
+.inGameHud #jsliters 
+{
+    font-size: 21.15px;
+}
+
+.inGameHud .locationhud {
+    color: #efefef;
+    position: absolute;
+    bottom: 0;
+    left: 15vw;;
+}
+
+.inGameHud .locationhud #location {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.inGameHud .locationhud #street {
+    font-size: 21px;
+}

@@ -1,0 +1,174 @@
+/*.visuallyhidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden
+}
+
+.disconnect {
+    font-family: 'UniNeue';
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative
+}
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../img/bg2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh
+}
+
+.main {
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.main .wifi {
+    width: 24%
+}
+
+@media screen and (max-width:1366px) {
+    .main .wifi {
+        width: 15%
+    }
+}
+
+.main .logo {
+    width: 100%
+}
+
+@media screen and (max-width:1366px) {
+    .main .logo {
+        width: 97%;
+        margin-left: -3%
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .main .logo {
+        width: 80%;
+        margin-left: -15%
+    }
+}
+
+.main__info {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.main__info__title {
+    font-weight: 800;
+    line-height: normal;
+    font-size: 2.8125rem;
+    color: #F2F2F2
+}
+
+.main__info__reason {
+    margin-top: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.main__info__reason__title {
+    font-weight: bold;
+    line-height: normal;
+    font-size: 1.875rem;
+    color: #F13939
+}
+
+.main__info__reason__name {
+    margin-left: 1.5%;
+    line-height: normal;
+    font-size: 1.875rem;
+    color: #FFFFFF
+}
+
+.main .tip {
+    color: #808080;
+    margin-top: 10%;
+    padding-top: 2%;
+    border-top: 0.0625rem solid rgba(255, 255, 255, 0.2);
+    width: 80%;
+    height: 5.625rem;
+    font-family: unineue;
+    line-height: normal;
+    font-size: 1.5625rem
+}
+
+@media screen and (max-width:1280px) {
+    .main .tip {
+        font-size: 1.4375rem
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .main .tip {
+        font-size: 1.3125rem
+    }
+}
+
+.radio-man {
+    z-index: 20;
+    position: absolute;
+    bottom: -3%;
+    left: 68%;
+    width: 32.5rem
+}
+
+@media screen and (max-width:1366px) {
+    .radio-man {
+        width: 28.125rem
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .radio-man {
+        left: 64%;
+        bottom: 0
+    }
+}*/

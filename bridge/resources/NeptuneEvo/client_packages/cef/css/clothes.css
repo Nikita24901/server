@@ -1,0 +1,131 @@
+.clothes{
+    height: 600px;
+    width: 350px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    top: 50%;
+    margin-top: -200px;
+}
+.clothes .right{
+    float: right;
+    height: 100%;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+}
+.clothes .left{
+    height: 100%;
+    width: 50px;
+    padding-top: 62px;
+    float: left;
+}
+.clothes i{
+    font-family: "icons";
+    font-style: normal;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #37474F;
+    border-radius: 5px;
+}
+.clothes i:hover{background-color: #263238}
+.clothes .list div{
+    width: 150px;
+    padding: 9px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #37474F;
+}
+.clothes h1{
+    margin: 0;
+    padding: 15px;
+    font-size: 20pt;
+    background-color: #e53935;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.clothes .left-arrow{
+    float: left;
+}
+.clothes .right-arrow{
+    float: right;
+}
+.clothes .list{
+    margin-left: 8%;
+    margin-top: 15px;
+    width: 250px;
+}
+.clothes .items{
+    height: 200px;
+}
+.clothes .btn{
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid;
+    cursor: pointer;
+    margin: 10px;
+}
+.clothes .buy{
+    background-color: #43A047;
+    margin-bottom: 10px;
+}
+.clothes .exit{
+    background-color: #e53935
+}
+.clothes .buy:hover{
+    background-color: #2E7D32;
+}
+.clothes .exit:hover{
+    background-color: #c62828;
+}
+.clothes .icon{
+    height: 50px;
+    background-color: #e53935;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-bottom: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 35px;
+}
+.clothes .icon.active{
+    background-color: #d32f2f;
+}
+.clothes .icon:hover{
+    background-color: #c62828;
+}
+.clothes p{
+    color: black;
+}
+.clothes p span{
+    color: green;
+    font-size: 16pt;
+}
+.clothes .hat{
+    background-image: url('../res/hat.png');
+}
+.clothes .jacket{
+    background-image: url('../res/jacket.png');
+}
+.clothes .shirt{
+    background-image: url('../res/shirt.png');
+}
+.clothes .pants{
+    background-image: url('../res/pants.png');
+    background-size: 20px;
+}
+.clothes .shoe{
+    background-image: url('../res/shoe.png');
+}
+.clothes .gloves{
+    background-image: url('../res/gloves.png');
+}
+.clothes .watches{
+    background-image: url('../res/watches.png');
+}
+.clothes .glasses{
+    background-image: url('../res/glasses.png');
+}
+.clothes .jewerly{
+    background-image: url('../res/jewerly.png');
+}

@@ -1,0 +1,13 @@
+bridge/runtime
+*.txt
+maps
+packages
+vs_project
+bt.dat
+LICENSE
+node.dll
+README.md
+server.exe
+conf.json
+Основное тут
+node_modules

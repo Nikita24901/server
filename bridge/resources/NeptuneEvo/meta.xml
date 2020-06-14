@@ -1,0 +1,7 @@
+﻿<meta>
+  <info name="NeptuneEvo" type="script"/>
+  <script src="bin/debug/netcoreapp2.0/NeptuneEvo.dll"/>
+  <script src="bin/debug/netcoreapp2.0/NeptuneEvoSDK.dll"/>
+
+  <export class="Customization" function="ApplyCharacter" />
+</meta>

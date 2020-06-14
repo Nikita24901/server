@@ -1,0 +1,699 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>redage.net - Auth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/noty.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/auth.css" />
+</head>
+
+<body>
+    <div class="switch-content authDiv">
+        <main class="gta-acount  authorization  auth-page  show">
+            <div class="gta-acount__content">
+                <img class="logo" src="images/auth/logo.png" alt="logo.png">
+				
+                <header>
+                    <h2>Авторизация на аккаунт</h2>
+                    <p>Если у вас уже существует аккаунт, то вы можете в&nbsp;него&nbsp;зайти</p>
+                </header>
+
+                <form id="auth-form" action="" method="POST">
+                    <div class="input-cont">
+                        <input type="text" class="entry-login" name="entry-login" id="entry-login-id" placeholder="Логин / E-mail" required>
+                    </div>
+
+                    <div class="input-cont">
+                        <input type="password" id="entry-password-id" name="entry-password" placeholder="Пароль" required>
+                    </div>
+
+                    <div class="checkbox-and-link">
+                        <a class="restore-pw js-btn-restore" href="restorepass.html">Восстановить пароль</a>
+                    </div>
+
+                    <div class="btn-cont">
+                        <input class="btn-enter js-btn-auth" type="submit" value="Войти">
+                        <a class="btn-register  js-btn-register" href="registration.html">Регистрация</a>
+                    </div>
+                </form>
+
+            </div>
+        </main>
+        <main class="gta-acount  restorepass  rest-page">
+            <div class="gta-acount__content">
+                    <img class="logo" src="images/auth/logo.png" alt="logo.png">
+
+                <header>
+                    <h2>Восстановление пароля</h2>
+                    <p>Если Вы вспомнили свой пароль, то можете вернуться</p>
+                </header>
+
+                <form id="rest-form" action="" method="POST">
+                    <div class="input-cont">
+                        <input type="text" class="entry-login" name="entry-login" id="entry-login-id" placeholder="Логин" required>
+                    </div>
+
+                    <div class="btn-cont">
+                        <a class="btn-back  js-btn-back" href="index.html">Назад</a>
+                        <input class="btn-restore-end" type="submit" value="Вспомнить!">
+                    </div>
+                </form>
+
+            </div>
+        </main>
+        <main class="gta-acount  registration  reg-page">
+            <div class="gta-acount__content">
+                    <img class="logo" src="images/auth/logo.png" alt="logo.png">
+					
+                <header>
+                    <h2>Регистрация аккаунтa</h2>
+                    <p>Если у Вас еще нет своего аккаунта, то вы можете создать его сейчас</p>
+                </header>
+                <form id="reg-form" action="" method="POST">
+                    <div class="input-cont">
+                        <input type="email" name="new-user__email" id="new-user__email-id" placeholder="E-mail" required>
+                    </div>
+
+                    <div class="input-cont">
+                        <input type="text" class="new-user__login" name="new-user__login" id="new-user__login-id" required>
+                        <div class="placeholder">Логин&nbsp;&nbsp;<span>(Не имя и фамилия персонажа!)</span></div>
+                    </div>
+
+                    <div class="input-cont">
+                        <input type="password" name="new-user__pw" id="new-user__pw-id" placeholder="Придумайте пароль" required>
+                    </div>
+
+                    <div class="input-cont">
+                        <input type="password" name="new-user__pw-repeat" id="new-user__pw-repeat-id" placeholder="Повторите пароль" required>
+                    </div>
+
+                    <div class="input-cont">
+                        <input type="text" class="promo-code" name="new-user__promo-code" id="new-user__promo-code" placeholder="Промо-код (не обязательно)">
+                    </div>
+
+                    <div class="btn-cont">
+                        <a class="btn-back  js-btn-back" href="index.html">Назад</a>
+                        <input class="btn-register-end" type="submit" value="Зарегистрироваться, GO!">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <main class="gta-acount  slots  slots-page">
+            <div class="slots__wrapper">
+                <header>
+                    <img src="img/logo-slots.png" alt="logo-slots.png">
+
+                    <p>RolePlay сервер <span>№</span> 1</p>
+
+                    <div class="red-bucks">
+                        <span>{{login}}, у Вас</span>
+                        <div class="red-bucks__total">
+                            <b>{{redbucks}}</b>
+                            <a href="#">Пополнить счет</a>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="slots__cols">
+                    <!-- (.active  +.delete)    (.free  +.create +.blocked)    .non-active -->
+                    <div class="slot-col  col-l  ">
+                        <div class="non-active__wrapper">
+                            <h2>Слот <b>№</b><span>1</span> еще не&nbsp;активирован</h2>
+                            <p>При покупке слота выдается навсегда, в нем можете создать нового персонажа</p>
+                            <p class="price">
+                                <span class="gray">Стоимость:</span> &nbsp;<b>$</b> <span class="value">1000</span> RedBucks
+                            </p>
+                            <p class="bonus">+ Бонус <span class="gold">VIP Gold</span> на срок 1 месяц.</p>
+                            <a href="#" class="btn  unlock-slot js-unlock-slot-1">Разблокировать слот</a>
+                        </div>
+
+                        <div class="free__wrapper">
+                            <img class="some-persone" src="img/person_free.jpg" alt="person_free.jpg">
+
+                            <!-- all status titles -->
+                            <h2>
+                                <span class="free-title">Слот <b>№</b><span>1</span> свободен</span>
+                                <span class="create-title">Создание нового персонажа</span>
+                                <span class="transfer-title">Перенос старого персонажа</span>
+                                <span class="blocked-title">Персонаж заблокирован</span>
+                            </h2>
+
+                            <!-- free -->
+                            <p>Вы можете создать нового персонажа, либо перенести старого на&nbsp;этот aккаунт</p>
+
+                            <a href="#" class="btn  create-new  js-create-new-1">Создать нового</a>
+                            <!-- <a href="#" class="btn  transfer-person  js-transfer-person-1">Перенести персонажа</a> -->
+                            <!-- create-new -->
+                            <form id="create-person-1" action="" method="POST">
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="new-person-1__name"
+                                        id="new-person-1__name-id"
+                                        placeholder="Имя (только на английском)"
+                                        pattern="[A-Za-z]"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input id="new-person-1__sername-id"
+                                        type="text"
+                                        name="new-person-1__sername"
+                                        placeholder="Фамилия (только на английском)"
+                                        pattern="[A-Za-z]"
+                                        required>
+                                </div>
+
+                                <input class="js-create-person-submit-1" type="submit" value="Создать и перейти к настройке">
+                            </form>
+                            <a href="#" class="cancel  js-create-cancel-1">Отмена</a>
+
+                            <!-- transfer-person -->
+                            <form id="transfer-person-1" action="" method="POST">
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="transfer-person-1__name"
+                                        id="transfer-person-1__name-id"
+                                        placeholder="Имя (только на английском)"
+                                        pattern="[A-Za-z]"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input id="transfer-person-1__sername-id"
+                                        type="text"
+                                        name="transfer-person-1__sername"
+                                        placeholder="Фамилия (только на английском)"
+                                        pattern="[A-Za-z]"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input type="password"
+                                        name="transfer-person-1__pw" id="transfer-person-1__pw-id"
+                                        placeholder="Пароль от персонажа"
+                                        required>
+                                </div>
+
+                                <input class="js-transfer-person-submit-1" type="submit" value="Перенести персонажа">
+                            </form>
+                            <a href="#" class="cancel  js-transfer-cancel-1">Отмена</a>
+
+                            <!-- blocked -->
+                            <div class="blocked-cont">
+                                <div class="blocked-cont__reason">
+                                    <h4>Причина:</h4>
+                                    <p>{{blockL[0]}}</p>
+                                    <h4>Забанил: &nbsp;<b>{{blockL[1]}}</b></h4>
+                                </div>
+
+                                <ul class="blocked-cont__dates">
+                                    <li>
+                                        <span>Дата бана:</span>
+                                        <time>{{blockL[2]}}</time>
+                                    </li>
+                                    <li>
+                                        <span>Дата разбана:</span>
+                                        <time class="green">{{blockL[3]}}</time>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="active__wrapper">
+                            <div class="person-cont">
+                                <img src="img/person_active.png" alt="person_active.png" class="active-persone">
+                            </div>
+
+                            <h2>Удаление вашего персонажа</h2>
+
+                            <h3><span class="name">{{slotL[0]}}</span> <span class="sername">{{slotL[1]}}</span></h3>
+
+                            <ul class="characteristics">
+                                <li>
+                                    <b>Уровень</b>
+                                    <span class="line"></span>
+                                    <div>{{slotL[2]}}</div>
+                                </li>
+                                <li>
+                                    <b>Exp</b>
+                                    <span class="line"></span>
+                                    <div>
+                                        <b>{{slotL[3]}}</b> / <span>{{slotL[4]}}</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <b>Фракция</b>
+                                    <span class="line"></span>
+                                    <div>{{slotL[5]}}</div>
+                                </li>
+                                <li>
+                                    <b>Денег на руках</b>
+                                    <span class="line"></span>
+                                    <div>
+                                        <span>{{slotL[6]}}</span> $
+                                    </div>
+                                </li>
+                                <li>
+                                    <b>Денег на счету</b>
+                                    <span class="line"></span>
+                                    <div>
+                                        <span>{{slotL[7]}}</span> $
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="cont">
+                                <a href="#" class="btn  btn-enter js-btn-enter-1">Войти</a>
+                                <a href="delete-person.html" class="js-btn-delete-1  btn-delete">Удалить персонажа</a>
+                            </div>
+
+                            <form id="delete-person-1" action="" method="POST">
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="delete-person-1__name"
+                                        id="delete-person-1__name-id"
+                                        placeholder="Имя"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="delete-person-1__sername" id="delete-person-1__sername-id"
+                                        placeholder="Фамилия"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input type="password"
+                                        name="delete-person-1__pw" id="delete-person-1__pw-id"
+                                        placeholder="Пароль от аккаунта"
+                                        required>
+                                </div>
+
+                                <input class="js-delete-person-submit-1" type="submit" value="Удалить персонажа навсегда">
+                            </form>
+                            <a href="#" class="js-delete-cancel-1  delete-cancel">Отмена</a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="slot-col  col-m  ">
+                        <div class="non-active__wrapper">
+                            <h2>Слот <b>№</b><span>2</span> еще не&nbsp;активирован</h2>
+                            <p>При покупке слота выдается навсегда, в нем можете создать нового персонажа</p>
+                            <p class="price">
+                                <span class="gray">Стоимость:</span> &nbsp;<b>$</b> <span class="value">1000</span> RedBucks
+                            </p>
+                            <p class="bonus">+ Бонус <span class="gold">VIP Gold</span> на срок 1 месяц.</p>
+                            <a href="#" class="btn  unlock-slot js-unlock-slot-2">Разблокировать слот</a>
+                        </div>
+
+                        <div class="free__wrapper">
+                            <img class="some-persone" src="img/person_free.jpg" alt="person_free.jpg">
+
+                            <!-- all status titles -->
+                            <h2>
+                                <span class="free-title">Слот <b>№</b><span>2</span> свободен</span>
+                                <span class="create-title">Создание нового персонажа</span>
+                                <span class="transfer-title">Перенос старого персонажа</span>
+                                <span class="blocked-title">Персонаж заблокирован</span>
+                            </h2>
+
+                            <!-- free -->
+                            <p>Вы можете создать нового персонажа, либо перенести старого на&nbsp;этот aккаунт</p>
+
+                            <a href="#" class="btn  create-new  js-create-new-2">Создать нового</a>
+                            <!-- <a href="#" class="btn  transfer-person  js-transfer-person-2">Перенести персонажа</a> -->
+                            <!-- create-new -->
+                            <form id="create-person-2" action="" method="POST">
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="new-person-2__name"
+                                        id="new-person-2__name-id"
+                                        placeholder="Имя (только на английском)"
+                                        pattern="[A-Za-z]"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="new-person-2__sername" id="new-person-2__sername-id"
+                                        placeholder="Фамилия (только на английском)"
+                                        pattern="[A-Za-z]"
+                                        required>
+                                </div>
+
+                                <input class="js-create-person-submit-2" type="submit" value="Создать и перейти к настройке">
+                            </form>
+                            <a href="#" class="cancel  js-create-cancel-2">Отмена</a>
+
+                            <!-- transfer-person -->
+                            <form id="transfer-person-2" action="" method="POST">
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="transfer-person-2__name"
+                                        id="transfer-person-2__name-id"
+                                        placeholder="Имя (только на английском)"
+                                        pattern="[A-Za-z]"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input id="transfer-person-2__sername-id"
+                                        type="text"
+                                        name="transfer-person-2__sername"
+                                        placeholder="Фамилия (только на английском)"
+                                        pattern="[A-Za-z]"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input type="password"
+                                        name="transfer-person-2__pw" id="transfer-person-2__pw-id"
+                                        placeholder="Пароль от персонажа"
+                                        required>
+                                </div>
+
+                                <input class="js-transfer-person-submit-2" type="submit" value="Перенести персонажа">
+                            </form>
+                            <a href="#" class="cancel  js-transfer-cancel-2">Отмена</a>
+
+                            <!-- blocked -->
+                            <div class="blocked-cont">
+                                <div class="blocked-cont__reason">
+                                    <h4>Причина:</h4>
+                                    <p>{{blockM[0]}}</p>
+                                    <h4>Забанил: &nbsp;<b>{{blockM[1]}}</b></h4>
+                                </div>
+
+                                <ul class="blocked-cont__dates">
+                                    <li>
+                                        <span>Дата бана:</span>
+                                        <time>{{blockM[2]}}</time>
+                                    </li>
+                                    <li>
+                                        <span>Дата разбана:</span>
+                                        <time class="green">{{blockM[3]}}</time>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="active__wrapper">
+
+                            <div class="person-cont">
+                                <img src="img/person_active.png" alt="person_active.png" class="active-persone">
+                            </div>
+
+                            <h2>Удаление вашего персонажа</h2>
+
+                            <h3><span class="name">{{slotM[0]}}</span> <span class="sername">{{slotM[1]}}</span></h3>
+
+                            <ul class="characteristics">
+                                <li>
+                                    <b>Уровень</b>
+                                    <span class="line"></span>
+                                    <div>{{slotM[2]}}</div>
+                                </li>
+                                <li>
+                                    <b>Exp</b>
+                                    <span class="line"></span>
+                                    <div>
+                                        <b>{{slotM[3]}}</b> / <span>{{slotM[4]}}</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <b>Фракция</b>
+                                    <span class="line"></span>
+                                    <div>{{slotM[5]}}</div>
+                                </li>
+                                <li>
+                                    <b>Денег на руках</b>
+                                    <span class="line"></span>
+                                    <div>
+                                        <span>{{slotM[6]}}</span> $
+                                    </div>
+                                </li>
+                                <li>
+                                    <b>Денег на счету</b>
+                                    <span class="line"></span>
+                                    <div>
+                                        <span>{{slotM[7]}}</span> $
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="cont">
+                                <a href="#" class="btn  btn-enter js-btn-enter-2">Войти</a>
+                                <a href="delete-person.html" class="js-btn-delete-2  btn-delete">Удалить персонажа</a>
+                            </div>
+
+                            <form id="delete-person-2" action="" method="POST">
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="delete-person-2__name"
+                                        id="delete-person-2__name-id"
+                                        placeholder="Имя"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="delete-person-2__sername" id="delete-person-2__sername-id"
+                                        placeholder="Фамилия"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input type="password"
+                                        name="delete-person-2__pw" id="delete-person-2__pw-id"
+                                        placeholder="Пароль от аккаунта"
+                                        required>
+                                </div>
+
+                                <input class="js-delete-person-submit-2" type="submit" value="Удалить персонажа навсегда">
+                            </form>
+                            <a href="#" class="js-delete-cancel-2  delete-cancel">Отмена</a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="slot-col  col-r  ">
+                        <div class="non-active__wrapper">
+                            <h2>Слот <b>№</b><span>3</span> еще не&nbsp;активирован</h2>
+                            <p>При покупке слота выдается навсегда, в нем можете создать нового персонажа</p>
+                            <p class="price">
+                                <span class="gray">Стоимость:</span> &nbsp;<b>$</b> <span class="value">1000</span> RedBucks
+                            </p>
+                            <p class="bonus">+ Бонус <span class="gold">VIP Gold</span> на срок 1 месяц.</p>
+                            <a href="#" class="btn  unlock-slot js-unlock-slot-3">Разблокировать слот</a>
+                        </div>
+
+                        <div class="free__wrapper">
+                            <img class="some-persone" src="img/person_free.jpg" alt="person_free.jpg">
+
+                            <!-- all status titles -->
+                            <h2>
+                                <span class="free-title">Слот <b>№</b><span>3</span> свободен</span>
+                                <span class="create-title">Создание нового персонажа</span>
+                                <span class="transfer-title">Перенос старого персонажа</span>
+                                <span class="blocked-title">Персонаж заблокирован</span>
+                            </h2>
+
+                            <!-- free -->
+                            <p>Вы можете создать нового персонажа, либо перенести старого на&nbsp;этот aккаунт</p>
+
+                            <a href="#" class="btn  create-new  js-create-new-3">Создать нового</a>
+                            <!-- <a href="#" class="btn  transfer-person  js-transfer-person-3">Перенести персонажа</a> -->
+                            <!-- create-new -->
+                            <form id="create-person-3" action="" method="POST">
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="new-person-3__name"
+                                        id="new-person-3__name-id"
+                                        placeholder="Имя (только на английском)"
+                                        pattern="[A-Za-z]"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="new-person-3__sername" id="new-person-3__sername-id"
+                                        placeholder="Фамилия (только на английском)"
+                                        pattern="[A-Za-z]"
+                                        required>
+                                </div>
+
+                                <input class="js-create-person-submit-3" type="submit" value="Создать и перейти к настройке">
+                            </form>
+                            <a href="#" class="cancel  js-create-cancel-3">Отмена</a>
+
+                            <!-- transfer-person -->
+                            <form id="transfer-person-3" action="" method="POST">
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="transfer-person-3__name"
+                                        id="transfer-person-3__name-id"
+                                        placeholder="Имя (только на английском)"
+                                        pattern="[A-Za-z]"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input id="transfer-person-3__sername-id"
+                                        type="text"
+                                        name="transfer-person-3__sername"
+                                        placeholder="Фамилия (только на английском)"
+                                        pattern="[A-Za-z]"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input type="password"
+                                        name="transfer-person-3__pw" id="transfer-person-3__pw-id"
+                                        placeholder="Пароль от персонажа"
+                                        required>
+                                </div>
+
+                                <input class="js-transfer-person-submit-3" type="submit" value="Перенести персонажа">
+                            </form>
+                            <a href="#" class="cancel  js-transfer-cancel-3">Отмена</a>
+
+                            <!-- blocked -->
+                            <div class="blocked-cont">
+                                <div class="blocked-cont__reason">
+                                    <h4>Причина:</h4>
+                                    <p>{{blockR[0]}}</p>
+                                    <h4>Забанил: &nbsp;<b>{{blockR[1]}}</b></h4>
+                                </div>
+
+                                <ul class="blocked-cont__dates">
+                                    <li>
+                                        <span>Дата бана:</span>
+                                        <time>{{blockR[2]}}</time>
+                                    </li>
+                                    <li>
+                                        <span>Дата разбана:</span>
+                                        <time class="green">{{blockR[3]}}</time>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="active__wrapper">
+                            <div class="person-cont">
+                                <img src="img/person_active.png" alt="person_active.png" class="active-persone">
+                            </div>
+
+                            <h2>Удаление вашего персонажа</h2>
+
+                            <h3><span class="name">{{slotR[0]}}</span> <span class="sername">{{slotR[1]}}</span></h3>
+
+                            <ul class="characteristics">
+                                <li>
+                                    <b>Уровень</b>
+                                    <span class="line"></span>
+                                    <div>{{slotR[2]}}</div>
+                                </li>
+                                <li>
+                                    <b>Exp</b>
+                                    <span class="line"></span>
+                                    <div>
+                                        <b>{{slotR[3]}}</b> / <span>{{slotR[4]}}</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <b>Фракция</b>
+                                    <span class="line"></span>
+                                    <div>{{slotR[5]}}</div>
+                                </li>
+                                <li>
+                                    <b>Денег на руках</b>
+                                    <span class="line"></span>
+                                    <div>
+                                        <span>{{slotR[6]}}</span> $
+                                    </div>
+                                </li>
+                                <li>
+                                    <b>Денег на счету</b>
+                                    <span class="line"></span>
+                                    <div>
+                                        <span>{{slotR[7]}}</span> $
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="cont">
+                                <a href="#" class="btn  btn-enter js-btn-enter-3">Войти</a>
+                                <a href="delete-person.html" class="js-btn-delete-3  btn-delete">Удалить персонажа</a>
+                            </div>
+
+                            <form id="delete-person-3" action="" method="POST">
+                                <div class="input-cont">
+                                    <input type="text"
+                                        name="delete-person-3__name"
+                                        id="delete-person-3__name-id"
+                                        placeholder="Имя"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input id="delete-person-3__sername-id"
+                                        type="text"
+                                        name="delete-person-3__sername"
+                                        placeholder="Фамилия"
+                                        required>
+                                </div>
+
+                                <div class="input-cont">
+                                    <input type="password"
+                                        name="delete-person-3__pw" id="delete-person-3__pw-id"
+                                        placeholder="Пароль от аккаунта"
+                                        required>
+                                </div>
+
+                                <input class="js-delete-person-submit-3" type="submit" value="Удалить персонажа навсегда">
+                            </form>
+                            <a href="#" class="js-delete-cancel-3  delete-cancel">Отмена</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <main class="gta-acount  delete-person  delete-person-page">
+            <div class="delete-person__alert">
+                <h2>
+                    Вы действительно хотите удалить персонажа: <br>
+                    <span class="js-person-name"></span> ?
+                </h2>
+
+                <p>Восстановить его в дальнейшем будет невозможно!</p>
+
+                <div class="btn-cont">
+                    <a href="#" class="btn-cancel  js-delete-cancel">Отмена</a>
+                    <a href="#" class="btn-confirm js-delete-confirm">Подтверждаю удаление</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="js/notify.js"></script>
+    <script src="js/noty.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

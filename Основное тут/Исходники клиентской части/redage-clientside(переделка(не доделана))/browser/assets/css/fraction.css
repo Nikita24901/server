@@ -1,0 +1,293 @@
+.fmenu {
+  position: absolute;
+  font-family: 'UniNeue';
+  font-weight: normal;
+  color:#fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fmenu .boxtop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+.fmenu .box {
+  width: 414px;
+  height: 678px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+}
+.fmenu .header {
+  width: 100%;
+  height: 54px;
+  display: flex;
+}
+.fmenu .arrow {
+  right: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  position: absolute;
+}
+.fmenu .arrow:hover {
+  transform: scale(1.1);
+  -webkit-transition: all 1s ease;
+}
+.fmenu .txtheader {
+  font-size: 18px;
+  line-height: 50px;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+}
+.fmenu .menubox {
+  width: 414px;
+  height: 52px;
+  background: rgba(0, 0, 0, 0.75);
+  align-items: center;
+  flex-wrap: wrap;
+}
+.fmenu .factionlist {
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  margin-top: 3px;
+}
+.fmenu .tabs { 
+  width: 100%; 
+  padding: 0px; 
+  margin: 0 auto; 
+}
+
+.fmenu .tabs>input { 
+  display:none; 
+}
+
+.fmenu .tabs>div {
+    height: 552px;
+}
+
+.fmenu .tabs>label {
+    display: inline-block;
+    text-align: center;
+    margin-left: 46px;
+    cursor: pointer;
+}
+
+.fmenu .fractxt {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 4px;
+  padding-bottom: 6px;
+}
+
+.fmenu .fractable {
+  margin-top: -9px;
+}
+
+.fmenu .fractable p {
+  font-size: 12px;
+}
+
+.fmenu .toptable {
+  height: 20px;
+  background: rgba(108, 108, 108, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding-left: 25px;
+}
+.fmenu .topinfouser {
+  height: 20px;
+  background: rgba(108, 108, 108, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fmenu .toptable p {
+  margin-top: 2px;
+}
+
+.fmenu .userline {
+  height: 20px;
+  background: rgba(200, 200, 200, 0.2);
+  margin-top: 1px;
+}
+
+.fmenu .tableID {
+  margin-left: 22px;
+}
+
+.fmenu .tableonline {
+  width: 52px;
+  margin-left: 23px;
+  display: flex;
+}
+
+.fmenu .online {
+  width: 20px;
+  color: #588941;
+  margin-right: 3px;
+  text-align: right;
+}
+
+.fmenu .offline {
+  width: 20px;
+  color: #A54742;
+  margin-left: 3px;
+  text-align: left;
+}
+
+.fmenu .name {
+  width: 200px;
+  margin-left: 24px;
+}
+
+.fmenu .twotab {
+  margin-left:  56px;
+}
+.fmenu .infoname {
+  width: 200px;
+  height: 20px;
+  margin-left: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.fmenu .rank {
+  width: 26px;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.fmenu .rankuser {
+  width: 26px;
+  height: 20px;
+  text-align: center;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fmenu .userinfo {
+  height: 20px;
+  background: rgba(200, 200, 200, 0.2);
+  margin-top: 1px;
+}
+
+.fmenu .infoid {
+  width: 19px;
+  height: 20px;
+  text-align: center;
+  margin-left: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fmenu .onlinecheck {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+.fmenu .onlinecircle {
+  width: 6px;
+  height: 6px;
+  background: #588941;
+  border-radius: 50%;
+  margin-left: 41px;
+}
+.fmenu .offlinecircle {
+  width: 6px;
+  height: 6px;
+  background:  #A54742;
+  border-radius: 50%;
+  margin-left: 41px;
+}
+
+.fmenu .boxes {
+  height: 491px; 
+  width: 414px; 
+  overflow: hidden;
+}
+
+.fmenu .boxreports {
+  width: 105%;
+  height: 100%;
+  padding: 0 25px 0 0;
+  overflow: auto;
+}
+
+.fmenu .addorgaz {
+  width: 414px;
+  height: 41px;
+  background: rgba(200, 200, 200, 0.2);
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.fmenu .useraddinorgaz {
+  font-size: 18px;
+  width: 262px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  margin-left: 56px;
+}
+
+.fmenu input.useradd {
+    border: none;
+    background: none;
+    color: #fff;
+    width: 250px;
+}
+
+.fmenu input:focus {
+    outline: none;
+}
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.fmenu .arrowadd {
+  width: 22px;
+  height: 22px;
+  background: url(../img/fraction/arrow-back.svg);
+  margin-left: 44px;
+  cursor: pointer;
+}
+
+.fmenu .arrowadd:hover {
+  transform: scale(1.1);
+  -webkit-transition: all 1s ease;
+}
+
+.fmenu .bable {
+  margin-top: 1px;
+}
+
+.fmenu .selectedSort::after {
+  height: 8px;
+  position: absolute;
+  content: '';
+  -webkit-mask: url("../img/fraction/arrow.svg") no-repeat;
+  -webkit-mask-size: cover;
+  padding: 0px 7px 0px 7px;
+  mask-size: cover;
+  background-color: #fff;
+}
+
+.fmenu .reversedSort::after {
+  transform: rotate(-180deg);
+  margin-top: 5px;
+}

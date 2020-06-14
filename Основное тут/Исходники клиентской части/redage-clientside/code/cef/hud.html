@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>redage.net - Hud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/hud.css">
+    <link rel="stylesheet" href="fonts/notify.css">
+    <link rel="stylesheet" href="css/noty.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <style>
+        #effect {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #safezone {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /*background: rgba(197, 0, 0, 0.5);*/
+        }
+
+        .inpocket {
+            background-image: url('res/inpocket.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            position: absolute;
+        }
+
+        .help {
+            opacity: 0.5;
+            position: absolute;
+            text-align: left;
+            right: 0px;
+            bottom: 25%;
+            font-family: Uni Neue;
+            font-size: 12px;
+            /*top: 50%;
+            transform: translateY(-50%);*/
+        }
+
+        .help p {
+            font-size: 12pt;
+            font-weight: 600;
+            margin: 0;
+            color: white;
+        }
+
+        .info {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 10pt;
+            font-weight: 600;
+            color: white;
+            text-shadow: 1px 1px 5px black,1px 1px 5px black;
+        }
+    </style>
+    <title>HUD</title>
+</head>
+<body>
+    <div id="safezone">
+        <div class="inGameHud" v-if="show">
+            <div class="adaptivhud">
+                <div class="position">
+                    <div class="gunshud" v-if="ammo"> <!-- if have weapon -->
+                        <div class="patrons">
+                            <img src="images/hud/patron.svg"> 
+                            <div class="patronsblock">
+                                <p id="patronnum">{{ammo}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hud"> <!-- on foot default hud -->
+                        <div class="datehud"><p id="time">{{time}}</p><br><p id="datetime">{{date}}</p> </div>
+                        <div class="microhud">
+                            <img v-if="mic" id="microsound" src="images/hud/micro_on.svg">
+                            <img v-else id="microsound" src="images/hud/micro_off.svg">
+                        </div>
+                        <div class="pouch">
+                            <img src="images/hud/money_pouch.svg">
+                            <div class="moneyinblock" >
+                                <p id="money">$</p><p id="jsmoney">{{money}}</p>
+                            </div>
+                        </div>
+                        <div class="bank">
+                            <img src="images/hud/money_bank.svg">
+                            <div class="bankinblock">
+                                <p id="money">$</p>
+                                <p id="jsbank">{{bank}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="locationhud">
+                        <p id="location">{{crossingRoad}}</p>
+                        <p id="street">{{street}}</p>
+                    </div>
+
+                    <div class="carhud" :style="{ opacity: inVeh ? 1 : 0 }">
+                        <div class="carshuds"> <!-- car hud -->
+                            <div class="speedhud"><p id="speed">{{speed}}</p><br><p id="speedtxt">КМ|ч</p></div>
+                            <div class="doorhud">
+                                <img v-if="doors" id="doord" src="images/hud/door_open.svg">
+                                <img v-else id="doord" src="images/hud/door_closed.svg">
+                            </div>
+                            <div class="enginehud">
+                                <img v-if="engine" id="engined" src="images/hud/engine_on.svg">
+                                <img v-else id="engined" src="images/hud/engine_off.svg">
+                            </div>
+
+                            <div class="petrol">
+                                <img v-if="fuel < 30" id="petroled" src="images/hud/petrol_min.svg">
+                                <img v-else-if="fuel < 60" id="petroled" src="images/hud/petrol_mid.svg">
+                                <img v-else id="petroled" src="images/hud/petrol_max.svg">
+
+                                <div v-if="fuel < 30" class="petrolblock" style="color: #E44242;"><p id="jsliters">{{fuel}}</p><p id="petrolit">l</p></div>
+                                <div v-else-if="fuel < 60" class="petrolblock" style="color: #E1E442;"><p id="jsliters">{{fuel}}</p><p id="petrolit">l</p></div>
+                                <div v-else class="petrolblock" style="color: #FFFFFF;"><p id="jsliters">{{fuel}}</p><p id="petrolit">l</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="help">
+            <p>N - Микрофон</p>
+            <p>I - Инвентарь</p>
+            <p>M - Телефон</p>
+            <p>U - Анимации</p>
+            <p>B - Завести машину</p>
+            <p>L - Закрыть/открыть авто</p>
+            <p>5 - Никнеймы</p>
+            <p>6 - Круиз-контроль</p>
+            <p>F5 - Скрыть HUD</p>
+            <p>F9 - Донат панель</p>
+            <p>F10 - Помощь</p>
+            <p>Ё(~) - Курсор</p>
+        </div>
+        
+        <div id="chat" class="chat">
+            <ul id="chat_messages"></ul>
+        </div>
+    
+        <div class="logobox" v-if="show">
+            <div class="logo">
+                <img src="img/logo-smallpng.png"/>
+                
+                <a v-if="server == 1">RedAge.net Black<br>Онлайн {{online}}/1500</a>
+                <a v-else-if="server == 2">RedAge.net White<br>Онлайн {{online}}/1000</a>
+				<a v-else-if="server == 3">RedAge.net Red<br>Онлайн {{online}}/1000</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="effect"></div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/colorInterpolator.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/hud.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/noty.min.js"></script>
+    <script src="js/notify.js"></script>
+    <script>
+        function hidehud(toggle) {
+            if (toggle) {
+                HUD.show = false;
+                logotype.show = false;
+            } else {
+                HUD.show = true;
+                logotype.show = true;
+            }
+        }
+        function hidehelp(toggle) {
+            if (toggle) {
+                $('.help').hide();
+            } else {
+                $('.help').show();
+            }
+        }
+    </script>
+    <script>
+        function updateSafeZoneSize(screenWidht, screenHeight, safeZoneSize) {
+            
+            var savezoneDiv = document.getElementById("safezone");
+            safeZoneSize = (((1.0 - safeZoneSize) * 0.5) * 100.0);
+
+            savezoneDiv.style.right = savezoneDiv.style.left = ((screenWidht / 100) * safeZoneSize) + "px";
+            savezoneDiv.style.top = savezoneDiv.style.bottom = ((screenHeight / 100) * safeZoneSize) + "px";
+            return true;
+        }
+    </script>
+</body>
+</html>

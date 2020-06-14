@@ -1,0 +1,151 @@
+.help {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    max-width: 1059px;
+    height: 560px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: UniNeue;
+}
+
+.help .exit {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    right: 0;
+    margin: 17px;
+}
+
+.help .navigation {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    padding-left: 55px;
+    margin-bottom: 30px;
+    margin-top: 48px;
+    max-width: 1000px;
+}
+
+.help .navigation li {
+    width: 100%;
+    max-width: 190px;
+    margin-right: 1px;
+}
+
+.help .nav{
+    background: rgba(200, 200, 200, 0.2);
+}
+
+.help .navSelected {
+    background: rgba(200, 200, 200, 0.4);
+}
+
+.help .navigation li span {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 38px;
+    align-items: center;
+    margin-right: 1px;
+    transition: all 0.1s ease-in;
+}
+
+.help .content {
+    max-width: 1000px;
+    padding-left: 55px;
+    color: #fff;
+}
+
+.help .images-rd img {
+    width: 310px;
+    margin-right: 5px;
+}
+
+.help .beginners .title {
+    font-size: 26px;
+    line-height: 35px;
+    color: #DD4C4C;
+    margin-bottom: 5px;
+}
+
+.help .description {
+    margin-bottom: 12px;
+}
+
+.help .description p {
+    margin-bottom: 15px;
+}
+
+.help .workitem {
+    margin-top: 80px;
+    position: absolute;
+    width: 955px;
+    
+}
+
+.help .workitem .title {
+    position: absolute;
+    display: flex;
+    width: 955px;
+    
+    margin-top: -60px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 49px;
+}
+
+.help .workitem .title span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.help .workitem .leftJob {
+    font-size: 20px;
+    margin-top: 15px;
+    transform: rotateZ(180deg);
+    position: absolute;
+}
+
+.help .workitem .rightJob {
+    font-size: 20px;
+    margin-top: 15px;
+    position: absolute;
+    right: 0;
+}
+
+.help .workitem .subtitle {
+    color: #E1ED5D;
+}
+
+.help .workitem .description {
+    position: absolute;
+    width: 580px;
+}
+
+.help .workitem .commands {
+    margin-top: 10px;
+}
+
+.help .workitem .commands span {
+    color: rgb(110, 173, 255)
+}
+
+.help .workitem .preview {
+    position: absolute;
+    margin-top: 5px;
+    right: 0px;
+}
+
+.wiki {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}

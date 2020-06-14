@@ -1,0 +1,136 @@
+.character_editor {
+    margin: 10px;
+    width: 42vh;
+    height: 98vh;
+    max-height: 98vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.character_editor h1 {
+    background: #E74856;
+    box-shadow: 0 0 15px #E74856;
+    color: white;
+    padding: 8px;
+    margin: 10px;
+    font-size: 10pt;
+    text-align: center;
+    font-weight: 300;
+}
+
+.character_editor h3 {
+    margin: 8px;
+    font-size: 18pt;
+    font-weight: 300;
+    color: white;
+}
+
+.character_editor .button {
+    background: #E74856;
+    box-shadow: 0 0 15px #E74856;
+    color: white;
+    padding: 8px;
+    margin: 10px;
+    font-size: 10pt;
+    text-align: center;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.character_editor .button:hover {
+    background: #FF4343;
+}
+
+.character_editor .slider {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.character_editor .element {
+    padding: 8px;
+    color: white;
+}
+
+.character_editor .switch{
+    display: block;
+}
+
+.character_editor .switch .btn{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 3px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: rgb(55, 55, 55);
+}
+
+.character_editor .switch .on{
+    background-color: #E74856;
+}
+
+.character_editor .list {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.character_editor .list div {
+    padding: 9px 8px 6px 8px;
+    width: 57%;
+    text-align: center;
+    background-color: #E74856;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: white;
+    display: inline-block;
+}
+
+.character_editor .list i {
+    margin: 5px;
+    margin-top: 1px;
+}
+
+.character_editor  .list .left {
+    background-color: #E74856;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    transform: rotateZ(180deg);
+}
+
+.character_editor .list .right {
+    background-color: #E74856;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.character_editor .list input:hover, .list .right:hover, .list .left:hover {
+    background-color: #FF4343;
+    cursor: pointer;
+}
+
+.character_editor .list input:active, .list .right:active, .list .left:active {
+    background-color: #E74856;
+    cursor: pointer;
+}
+
+.character_editor ::-webkit-scrollbar {
+    width: 8px;
+}
+.character_editor ::-webkit-scrollbar-track {
+    background: #555;
+}
+.character_editor ::-webkit-scrollbar-thumb {
+    background: #ddd; 
+}
