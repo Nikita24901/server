@@ -22,7 +22,7 @@
     "style-loader": "^0.23.0",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.3.4",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^5.2.1"
   },
   "dependencies": {
     "base64-image": "^0.1.0",
